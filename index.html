@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Moataz Mostafa Ali Ibrahim — Cybersecurity Analyst and IT Support Specialist portfolio." />
+    <title>Moataz Ibrahim | Cybersecurity Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              slate: {
+                950: '#020617',
+                900: '#0f172a',
+                850: '#111c31',
+                800: '#172033'
+              },
+              cyan: {
+                450: '#34d5e0'
+              },
+              emerald: {
+                450: '#34d399'
+              }
+            },
+            boxShadow: {
+              neon: '0 0 0 1px rgba(52,213,224,0.16), 0 0 40px rgba(52,213,224,0.14)'
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      :root {
+        color-scheme: dark;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+      }
+      .glass {
+        backdrop-filter: blur(18px);
+        background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.55));
+      }
+      .grid-overlay {
+        background-image: linear-gradient(rgba(52, 213, 224, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(52, 213, 224, 0.08) 1px, transparent 1px);
+        background-size: 32px 32px;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-slate-950 text-slate-100 antialiased">
+    <div class="absolute inset-0 -z-10 overflow-hidden">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(52,211,153,0.18),_transparent_35%),radial-gradient(circle_at_80%_20%,_rgba(34,211,238,0.16),_transparent_25%)]"></div>
+      <div class="grid-overlay absolute inset-0 opacity-40"></div>
+    </div>
+
+    <header class="sticky top-0 z-50 border-b border-white/10 bg-slate-950/80 backdrop-blur-xl">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+        <a href="#top" class="flex items-center gap-3 text-sm font-semibold tracking-[0.28em] text-cyan-300 uppercase">
+          <span class="flex h-10 w-10 items-center justify-center rounded-full border border-cyan-400/30 bg-cyan-400/10 text-base font-bold text-cyan-300">MI</span>
+          <span class="hidden sm:inline">Moataz Ibrahim</span>
+        </a>
+        <button id="menuToggle" class="rounded-full border border-cyan-400/20 bg-cyan-400/10 p-2 text-cyan-300 md:hidden" aria-label="Toggle navigation">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+        </button>
+        <nav id="navMenu" class="hidden items-center gap-6 text-sm text-slate-300 md:flex">
+          <a href="#about" class="transition hover:text-cyan-300">About</a>
+          <a href="#experience" class="transition hover:text-cyan-300">Experience</a>
+          <a href="#projects" class="transition hover:text-cyan-300">Projects</a>
+          <a href="#certifications" class="transition hover:text-cyan-300">Certifications</a>
+          <a href="#contact" class="transition hover:text-cyan-300">Contact</a>
+          <button onclick="downloadCV()" class="rounded-full border border-emerald-400/30 bg-emerald-400/10 px-4 py-2 font-semibold text-emerald-300 transition hover:bg-emerald-400/20">Download CV</button>
+        </nav>
+      </div>
+      <div id="mobileMenu" class="hidden border-t border-white/10 bg-slate-950/95 px-4 py-4 md:hidden">
+        <div class="flex flex-col gap-3 text-sm text-slate-300">
+          <a href="#about" class="transition hover:text-cyan-300">About</a>
+          <a href="#experience" class="transition hover:text-cyan-300">Experience</a>
+          <a href="#projects" class="transition hover:text-cyan-300">Projects</a>
+          <a href="#certifications" class="transition hover:text-cyan-300">Certifications</a>
+          <a href="#contact" class="transition hover:text-cyan-300">Contact</a>
+          <button onclick="downloadCV()" class="w-fit rounded-full border border-emerald-400/30 bg-emerald-400/10 px-4 py-2 font-semibold text-emerald-300">Download CV</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top" class="mx-auto flex max-w-7xl flex-col gap-8 px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
+      <section id="about" class="grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
+        <div class="glass rounded-[2rem] border border-cyan-400/20 p-6 shadow-neon sm:p-8 lg:p-10">
+          <div class="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.3em] text-cyan-300">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7l7-4z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" /></svg>
+            Available for global SOC & CSIRT roles
+          </div>
+          <h1 class="max-w-3xl text-4xl font-semibold leading-tight text-white sm:text-5xl lg:text-6xl">
+            Building resilient security operations from <span class="text-cyan-300">analysis</span>, <span class="text-emerald-300">automation</span>, and <span class="text-cyan-300">clear response</span>.
+          </h1>
+          <p class="mt-5 max-w-2xl text-lg leading-8 text-slate-300">
+            I’m Moataz Mostafa Ali Ibrahim, a Cybersecurity Analyst and Computer Science student with hands-on experience in Python scripting, Linux log analysis, SIEM workflows, and practical IT support.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#projects" class="rounded-full bg-cyan-400 px-5 py-3 font-semibold text-slate-950 transition hover:brightness-110">View Projects</a>
+            <a href="#contact" class="rounded-full border border-cyan-400/30 bg-cyan-400/10 px-5 py-3 font-semibold text-cyan-300 transition hover:bg-cyan-400/20">Contact Me</a>
+          </div>
+          <div class="mt-8 flex flex-wrap gap-3 text-sm text-slate-400">
+            <span class="rounded-full border border-white/10 px-3 py-1">Aswan, Egypt</span>
+            <span class="rounded-full border border-white/10 px-3 py-1">+20 115 623 7873</span>
+            <span class="rounded-full border border-white/10 px-3 py-1">stareno2020@gmail.com</span>
+          </div>
+        </div>
+
+        <div class="glass rounded-[2rem] border border-emerald-400/20 p-6 shadow-neon sm:p-8">
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-sm uppercase tracking-[0.3em] text-emerald-300">Current focus</p>
+              <h2 class="mt-2 text-2xl font-semibold text-white">Cybersecurity Analyst | IT & Tech Support Specialist</h2>
+            </div>
+            <div class="rounded-2xl border border-cyan-400/20 bg-cyan-400/10 p-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-cyan-300" viewBox="0 0 24 24" fill="none"><path d="M9 3h6l3 4v2l-3 2H9L6 9V7l3-4zm-2 8h10v8a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2v-8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" /></svg>
+            </div>
+          </div>
+          <div class="mt-6 grid gap-4">
+            <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-4">
+              <p class="text-sm text-cyan-300">Threat detection</p>
+              <p class="mt-1 text-sm text-slate-300">Simulating phishing, brute-force, and log-analysis scenarios using MITRE ATT&CK.</p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-4">
+              <p class="text-sm text-cyan-300">Automation angle</p>
+              <p class="mt-1 text-sm text-slate-300">Python-based tools for parsing auth logs, scanning TCP ports, and speeding up triage.</p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-slate-900/70 p-4">
+              <p class="text-sm text-cyan-300">Infrastructure support</p>
+              <p class="mt-1 text-sm text-slate-300">Assisting users with hardware, OS diagnostics, network basics, and Microsoft Office workflows.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="rounded-[2rem] border border-white/10 bg-slate-900/70 p-6 sm:p-8">
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p class="text-sm uppercase tracking-[0.3em] text-emerald-300">Technical skill stack</p>
+            <h2 class="mt-2 text-3xl font-semibold text-white">Focused on detection, response, and reliable support.</h2>
+          </div>
+          <p class="max-w-xl text-sm leading-7 text-slate-400">A practical mix of SIEM operations, networking fundamentals, Python automation, and hands-on IT support.</p>
+        </div>
+        <div class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          <article class="rounded-2xl border border-cyan-400/20 bg-slate-950/70 p-5">
+            <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-cyan-400/10 text-cyan-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 12h14M5 12l4-4m-4 4l4 4" /></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-white">SIEM & Threat Detection</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-400">LogRhythm, Splunk, ELK Stack, Wazuh, and EDR consoles.</p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-300">
+              <li>• Incident triage</li>
+              <li>• Rule correlation</li>
+              <li>• MITRE ATT&CK mapping</li>
+            </ul>
+          </article>
+          <article class="rounded-2xl border border-cyan-400/20 bg-slate-950/70 p-5">
+            <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-cyan-400/10 text-cyan-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 3v18M3 12h18M7 7l10 10M17 7L7 17" /></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-white">Networking & Firewalls</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-400">TCP/IP, DNS, routing, Wi-Fi architecture, Wireshark, and Nmap.</p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-300">
+              <li>• Packet analysis</li>
+              <li>• Vulnerability review</li>
+              <li>• Network baseline checks</li>
+            </ul>
+          </article>
+          <article class="rounded-2xl border border-emerald-400/20 bg-slate-950/70 p-5">
+            <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-emerald-400/10 text-emerald-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M10 4h4l2 4h3a1 1 0 0 1 1 1v2a4 4 0 0 1-4 4H12a4 4 0 0 1-4-4V9h3l2-4zM6 15h12v2a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-2z" /></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-white">Automation & Scripting</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-400">Python, Bash, PowerShell, Agentic AI tools, and Linux automation.</p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-300">
+              <li>• auth.log parsing</li>
+              <li>• port scanning</li>
+              <li>• workflow acceleration</li>
+            </ul>
+          </article>
+          <article class="rounded-2xl border border-emerald-400/20 bg-slate-950/70 p-5">
+            <div class="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-emerald-400/10 text-emerald-300">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 7h16M7 12h10M9 17h6" /></svg>
+            </div>
+            <h3 class="text-lg font-semibold text-white">IT & Infrastructure</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-400">Hardware troubleshooting, Windows diagnostics, basic network setup, and user training.</p>
+            <ul class="mt-4 space-y-2 text-sm text-slate-300">
+              <li>• PC optimization</li>
+              <li>• Identity baselines</li>
+              <li>• ICDL & Office support</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience" class="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+        <div class="rounded-[2rem] border border-white/10 bg-slate-900/70 p-6 sm:p-8">
+          <p class="text-sm uppercase tracking-[0.3em] text-cyan-300">Professional experience</p>
+          <h2 class="mt-2 text-3xl font-semibold text-white">A mix of virtual simulations, security analysis, and hands-on support.</h2>
+          <div class="mt-8 space-y-4">
+            <div class="rounded-2xl border border-cyan-400/20 bg-slate-950/70 p-4">
+              <div class="flex items-center justify-between gap-3">
+                <div>
+                  <p class="text-lg font-semibold text-white">Cybersecurity Virtual Experience Program</p>
+                  <p class="text-sm text-cyan-300">Mastercard via Forage • 06/2026</p>
+                </div>
+                <span class="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs uppercase tracking-[0.3em] text-cyan-300">Simulation</span>
+              </div>
+              <p class="mt-3 text-sm leading-7 text-slate-400">Functioned as a security awareness analyst, identifying phishing patterns, decoding logs, and recommending training improvements for vulnerable business units.</p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+              <div class="flex items-center justify-between gap-3">
+                <div>
+                  <p class="text-lg font-semibold text-white">General IT & Technical Support Specialist</p>
+                  <p class="text-sm text-emerald-300">Self-Employed • 2015 – Present</p>
+                </div>
+                <span class="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-xs uppercase tracking-[0.3em] text-emerald-300">Applied</span>
+              </div>
+              <p class="mt-3 text-sm leading-7 text-slate-400">Delivered PC troubleshooting, Windows diagnostics, software deployment, identity baseline support, and basic training aligned to ICDL and Microsoft Office practices.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="rounded-[2rem] border border-white/10 bg-slate-900/70 p-6 sm:p-8">
+          <p class="text-sm uppercase tracking-[0.3em] text-emerald-300">What I bring</p>
+          <div class="mt-6 space-y-4">
+            <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+              <p class="text-lg font-semibold text-white">Incident handling mindset</p>
+              <p class="mt-2 text-sm leading-7 text-slate-400">From triage to reporting, I focus on structured response, root cause clarity, and documentation discipline.</p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+              <p class="text-lg font-semibold text-white">Security-first curiosity</p>
+              <p class="mt-2 text-sm leading-7 text-slate-400">I enjoy translating suspicious activity into practical detections, playbooks, and better defense decisions.</p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+              <p class="text-lg font-semibold text-white">Cross-functional communication</p>
+              <p class="mt-2 text-sm leading-7 text-slate-400">Whether supporting end users or explaining risks to teams, I communicate clearly under pressure.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="rounded-[2rem] border border-white/10 bg-slate-900/70 p-6 sm:p-8">
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p class="text-sm uppercase tracking-[0.3em] text-cyan-300">Hands-on projects</p>
+            <h2 class="mt-2 text-3xl font-semibold text-white">Home lab experiments and tools shaped for real security workflows.</h2>
+          </div>
+          <p class="max-w-xl text-sm leading-7 text-slate-400">Selected work demonstrating practical detection, scripting growth, and incident-response thinking.</p>
+        </div>
+        <div class="mt-8 grid gap-5 lg:grid-cols-2">
+          <article class="rounded-[1.5rem] border border-cyan-400/20 bg-slate-950/70 p-5">
+            <div class="flex flex-wrap gap-2">
+              <span class="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.25em] text-cyan-300">Python</span>
+              <span class="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.25em] text-cyan-300">Log Analysis</span>
+              <span class="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.25em] text-emerald-300">Linux</span>
+            </div>
+            <h3 class="mt-4 text-xl font-semibold text-white">Linux auth.log parser</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-400">Built a Python script that extracts failed sudo attempts and flags suspicious brute-force traffic from system logs.</p>
+            <p class="mt-4 text-sm text-cyan-300">Impact: improved simulated triage speed and pattern detection clarity.</p>
+          </article>
+          <article class="rounded-[1.5rem] border border-cyan-400/20 bg-slate-950/70 p-5">
+            <div class="flex flex-wrap gap-2">
+              <span class="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.25em] text-cyan-300">Python</span>
+              <span class="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.25em] text-cyan-300">Socket</span>
+              <span class="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.25em] text-emerald-300">Networking</span>
+            </div>
+            <h3 class="mt-4 text-xl font-semibold text-white">TCP port scanner</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-400">Created a command-line utility using Python’s socket module to quickly identify open ports on a target host.</p>
+            <p class="mt-4 text-sm text-cyan-300">Use case: rapid recon and basic service discovery in homelab scenarios.</p>
+          </article>
+          <article class="rounded-[1.5rem] border border-white/10 bg-slate-950/70 p-5">
+            <div class="flex flex-wrap gap-2">
+              <span class="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.25em] text-cyan-300">SIEM</span>
+              <span class="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.25em] text-cyan-300">MITRE ATT&CK</span>
+              <span class="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.25em] text-emerald-300">TryHackMe</span>
+            </div>
+            <h3 class="mt-4 text-xl font-semibold text-white">SIEM & incident triage simulations</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-400">Practiced L1 SOC workflows in ELK Stack and Wazuh, including log filtering, rule matching, packet review, and structured incident reporting.</p>
+            <p class="mt-4 text-sm text-cyan-300">Outcome: stronger understanding of alert handling, timelines, and evidence preparation.</p>
+          </article>
+          <article class="rounded-[1.5rem] border border-white/10 bg-slate-950/70 p-5">
+            <div class="flex flex-wrap gap-2">
+              <span class="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.25em] text-cyan-300">AI Agents</span>
+              <span class="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.25em] text-cyan-300">PowerShell</span>
+              <span class="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-xs font-medium uppercase tracking-[0.25em] text-emerald-300">Automation</span>
+            </div>
+            <h3 class="mt-4 text-xl font-semibold text-white">AI-driven operational workflows</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-400">Explored command-line AI agents and PowerShell scripts to automate baseline maintenance and accelerate logging reviews.</p>
+            <p class="mt-4 text-sm text-cyan-300">Focus: practical automation supporting security hygiene and reporting.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="certifications" class="grid gap-6 lg:grid-cols-[1.05fr_0.95fr]">
+        <div class="rounded-[2rem] border border-white/10 bg-slate-900/70 p-6 sm:p-8">
+          <p class="text-sm uppercase tracking-[0.3em] text-emerald-300">Education & credentials</p>
+          <h2 class="mt-2 text-3xl font-semibold text-white">Continual growth through formal study and specialized training.</h2>
+          <div class="mt-8 space-y-4">
+            <div class="rounded-2xl border border-cyan-400/20 bg-slate-950/70 p-4">
+              <p class="text-lg font-semibold text-white">Bachelor of Science in Computer Science</p>
+              <p class="mt-1 text-sm text-cyan-300">University of the People (UoPeople) • 2026 – Present</p>
+              <p class="mt-3 text-sm leading-7 text-slate-400">Focus: advanced computing logistics, secure network topologies, and database integrity.</p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+              <p class="text-lg font-semibold text-white">Relevant training</p>
+              <p class="mt-3 text-sm leading-7 text-slate-400">Computer Network Fundamentals — ITI, CompTIA Network+ — LinkedIn Learning, Learning Python for Cybersecurity — LinkedIn Learning, Linux Administration & Identity Management — LinkedIn Learning.</p>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-[2rem] border border-cyan-400/20 bg-slate-900/70 p-6 sm:p-8">
+          <p class="text-sm uppercase tracking-[0.3em] text-cyan-300">Certifications</p>
+          <div class="mt-6 space-y-3">
+            <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+              <p class="font-semibold text-white">Certified in Cybersecurity (CC)</p>
+              <p class="mt-1 text-sm text-slate-400">ISC2 • Active Member</p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+              <p class="font-semibold text-white">CompTIA Cybersecurity Analyst (CySA+)</p>
+              <p class="mt-1 text-sm text-slate-400">In Progress / Self-Study</p>
+            </div>
+            <div class="rounded-2xl border border-white/10 bg-slate-950/70 p-4">
+              <p class="font-semibold text-white">Languages</p>
+              <p class="mt-1 text-sm text-slate-400">Arabic — Native proficiency<br />English — Professional Working Proficiency</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="rounded-[2rem] border border-white/10 bg-slate-900/70 p-6 sm:p-8">
+        <div class="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
+          <div>
+            <p class="text-sm uppercase tracking-[0.3em] text-cyan-300">Contact</p>
+            <h2 class="mt-2 text-3xl font-semibold text-white">Let’s connect around security operations, automation, and growth opportunities.</h2>
+            <p class="mt-4 max-w-xl text-sm leading-7 text-slate-400">The form below is styled and ready for API integration later. For now it offers a polished contact experience and quick access to direct channels.</p>
+            <div class="mt-6 flex flex-wrap gap-3">
+              <a href="mailto:stareno2020@gmail.com" class="rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-2 text-sm font-semibold text-cyan-300 transition hover:bg-cyan-400/20">Email</a>
+              <a href="https://www.linkedin.com/in/moataz-ibrahim-a312b51aa" target="_blank" rel="noreferrer" class="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-4 py-2 text-sm font-semibold text-emerald-300 transition hover:bg-emerald-400/20">LinkedIn</a>
+              <a href="https://github.com" target="_blank" rel="noreferrer" class="rounded-full border border-white/10 bg-slate-950/70 px-4 py-2 text-sm font-semibold text-slate-300 transition hover:text-white">GitHub</a>
+            </div>
+          </div>
+          <form id="contactForm" class="rounded-[1.5rem] border border-cyan-400/20 bg-slate-950/70 p-5 sm:p-6">
+            <div class="grid gap-4 sm:grid-cols-2">
+              <div>
+                <label class="mb-2 block text-sm text-slate-300" for="name">Name</label>
+                <input id="name" name="name" class="w-full rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-3 text-sm text-white outline-none ring-0 transition focus:border-cyan-400" placeholder="Your name" required />
+              </div>
+              <div>
+                <label class="mb-2 block text-sm text-slate-300" for="email">Email</label>
+                <input id="email" name="email" type="email" class="w-full rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-3 text-sm text-white outline-none transition focus:border-cyan-400" placeholder="you@example.com" required />
+              </div>
+            </div>
+            <div class="mt-4">
+              <label class="mb-2 block text-sm text-slate-300" for="subject">Subject</label>
+              <input id="subject" name="subject" class="w-full rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-3 text-sm text-white outline-none transition focus:border-cyan-400" placeholder="Security opportunity / collaboration" required />
+            </div>
+            <div class="mt-4">
+              <label class="mb-2 block text-sm text-slate-300" for="message">Message</label>
+              <textarea id="message" name="message" rows="5" class="w-full rounded-2xl border border-white/10 bg-slate-900/80 px-4 py-3 text-sm text-white outline-none transition focus:border-cyan-400" placeholder="Share a brief overview of your idea or opportunity." required></textarea>
+            </div>
+            <div class="mt-5 flex flex-wrap items-center justify-between gap-3">
+              <p id="formStatus" class="text-sm text-slate-400">Ready for a future Azure Functions endpoint.</p>
+              <button type="submit" class="rounded-full bg-cyan-400 px-5 py-2.5 text-sm font-semibold text-slate-950 transition hover:brightness-110">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-white/10 px-4 py-8 text-center text-sm text-slate-500 sm:px-6 lg:px-8">
+      <p>© 2026 Moataz Mostafa Ali Ibrahim. Designed for a modern cybersecurity presence.</p>
+    </footer>
+
+    <script>
+      const menuToggle = document.getElementById('menuToggle');
+      const mobileMenu = document.getElementById('mobileMenu');
+      menuToggle?.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      const form = document.getElementById('contactForm');
+      const formStatus = document.getElementById('formStatus');
+      form?.addEventListener('submit', (event) => {
+        event.preventDefault();
+        formStatus.textContent = 'Thanks for reaching out — this form is ready to be wired to an API later.';
+        form.reset();
+      });
+
+      function downloadCV() {
+        const content = `MOATAZ MOSTAFA ALI IBRAHIM\nAswan, Egypt | +20 115 623 7873 | stareno2020@gmail.com | linkedin.com/in/moataz-ibrahim-a312b51aa\n\nPROFESSIONAL SUMMARY\nDedicated, growth-minded, and detail-oriented Cybersecurity Analyst and Computer Science student with hands-on experience in Python scripting, Linux log analysis, and SIEM administration. Proficient in simulating real-world detection, log decoding, and triage scenarios using the MITRE ATT&CK framework and enterprise security tools. Passionate about threat hunting, incident response, and embedding AI automation into security workflows. Available immediately, open to international relocation, and fully prepared for 24/7 rotational shifts in a high-performance CSIRT/SOC environment.\n\nTECHNICAL SKILLS\nSIEM & Monitoring: LogRhythm, Splunk, ELK Stack, Wazuh, EDR Consoles\nFrameworks & Analysis: MITRE ATT&CK, Incident Handling, Root Cause Analysis, Security Playbooks, Incident Triage, Vulnerability Assessment, Risk Analysis\nNetworking & Cloud: TCP/IP, OSI Model, DNS, IP Routing, Wi-Fi Architectures, Wireshark, Nmap, Cloud Security Concepts\nScripting, AI & OS: Python, Bash, Agentic AI Tools (Claude Code, PowerShell), Linux (Ubuntu, Debian), Windows Server/OS, Active Directory\nSoft Skills: Technical Documentation, Incident Reporting, Cross-functional Communication, Time Management\n\nCERTIFICATIONS & TRAINING\nCertified in Cybersecurity (CC) – ISC2 (Active Member)\nCompTIA Cybersecurity Analyst (CySA+) – In Progress / Self-Study\nComputer Network Fundamentals – Information Technology Institute (ITI)\nCompTIA Network+ – LinkedIn Learning\nLearning Python (Cybersecurity Use Cases) – LinkedIn Learning\nLinux Administration & Identity Management – LinkedIn Learning\n\nEXPERIENCE\nCybersecurity Virtual Experience Program – Mastercard via Forage (06/2026)\nGeneral IT & Technical Support Specialist – Self-Employed (2015 – Present)\n\nPROJECTS\nLinux Log Parser (auth.log)\nTCP Port Scanner\nSIEM & Incident Triage Simulations\n\nEDUCATION\nBachelor of Science in Computer Science – University of the People (2026 – Present)\n\nLANGUAGES\nArabic: Native proficiency\nEnglish: Professional Working Proficiency`;
+        const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'Moataz_Ibrahim_CV.txt';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+      }
+    </script>
+  </body>
+</html>
